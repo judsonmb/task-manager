@@ -12,9 +12,7 @@ Before you begin, ensure you have the following software installed:
 - NPM or Yarn
 - PostgreSQL
 
-## Step 1: Clone and access the repositoy
-
-1. Clone:
+## Clone the repository:
 
 ```bash
 git clone https://github.com/judsonmb/task-manager.git
@@ -26,9 +24,7 @@ git clone https://github.com/judsonmb/task-manager.git
 cd task-manager
 ```
 
-## Step 2: Configure PostgreSQL
-
-1. In the `.env` file, configure the database environment variables for PostgreSQL:
+## In the `.env` file, configure the database environment variables for PostgreSQL:
 
 ```env
 DB_CONNECTION=pgsql
@@ -39,41 +35,37 @@ DB_USERNAME=username
 DB_PASSWORD=password
 ```
 
-2. Create a database in PostgreSQL with the name you defined in `.env`.
-
-## Step 3: Install Laravel Dependencies
-
-### Install the project dependencies:
+## Install the project dependencies:
 
 ```bash
 composer install
 ```
 
-### Generate the application key:
+## Generate the application key:
 
 ```bash
 php artisan key:generate
 ```
 
-### Run the migrations to create the database tables:
+## Run the migrations to create the database tables:
 
 ```bash
 php artisan migrate --seed
 ```
 
-3. Install js dependencies:
+## Install js dependencies:
 
 ```bash
 npm install
 ```
 
-4. Compile the project assets:
+## Compile the project assets:
 
 ```bash
 npm run dev
 ```
 
-5. Run the Server: In your project directory, run the Laravel server:
+## Run the Server: In your project directory, run the Laravel server:
 
 ```bash
 php artisan serve
@@ -81,7 +73,7 @@ php artisan serve
 
 Open your browser and go to `http://localhost:8000` to see your application in action
 
-6. To run tests:
+## To run tests:
 
 ```bash
 php artisan test
