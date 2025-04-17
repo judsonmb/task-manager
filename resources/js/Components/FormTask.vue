@@ -1,15 +1,32 @@
 <template>
   <form @submit.prevent="submit" class="task-form">
     <div class="form-group">
-      <input v-model="form.title" placeholder="Title" class="input-field" />
+      <input
+        v-model="form.title"
+        placeholder="Title"
+        class="input-field"
+      />
+      <span v-if="form.errors.title" class="error-message">
+        {{ form.errors.title }}
+      </span>
     </div>
 
     <div class="form-group">
-      <textarea v-model="form.description" placeholder="Description" class="input-field"></textarea>
+      <textarea
+        v-model="form.description"
+        placeholder="Description"
+        class="input-field"
+      ></textarea>
+      <span v-if="form.errors.description" class="error-message">
+        {{ form.errors.description }}
+      </span>
     </div>
 
     <div class="form-group">
       <input type="date" v-model="form.due_date" class="input-field" />
+      <span v-if="form.errors.due_date" class="error-message">
+        {{ form.errors.due_date }}
+      </span>
     </div>
 
     <div class="form-group-row">
@@ -18,6 +35,9 @@
         <option value="medium">Medium</option>
         <option value="high">High</option>
       </select>
+      <span v-if="form.errors.priority" class="error-message">
+        {{ form.errors.priority }}
+      </span>
 
       <button type="submit" class="submit-btn">Create Task</button>
     </div>
@@ -41,7 +61,7 @@ const submit = () => {
       form.reset();
     },
     onError: (errors) => {
-      alert(errors);
+      console.log(errors);
     },
   });
 };
@@ -104,5 +124,11 @@ textarea {
 
 .submit-btn:hover {
   background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
 }
 </style>
