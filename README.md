@@ -12,15 +12,15 @@ Before you begin, ensure you have the following software installed:
 - NPM or Yarn
 - PostgreSQL
 
-## Step 1: Create a Laravel Project
+## Step 1: Clone and access the repositoy
 
-1. Create a new Laravel project:
+1. Clone:
 
 ```bash
 git clone https://github.com/judsonmb/task-manager.git
 ```
 
-2. Navigate to the project directory:
+2. Navigate to access the project directory:
 
 ```bash
 cd task-manager
