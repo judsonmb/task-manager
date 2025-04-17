@@ -18,6 +18,7 @@
       <ul>
         <li v-for="task in tasks.data" :key="task.id" class="task-item">
           <div class="task-title">{{ task.title }}</div>
+          <div class="task-title">{{ task.description }}</div>
           <div class="task-status">Status: <strong>{{ task.status }}</strong></div>
           <div class="task-status">Priority: <strong>{{ task.priority }}</strong></div>
           <div class="task-status">Due date: <strong>{{ task.due_date }}</strong></div>
