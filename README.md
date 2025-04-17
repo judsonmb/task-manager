@@ -17,13 +17,13 @@ Before you begin, ensure you have the following software installed:
 1. Create a new Laravel project:
 
 ```bash
-composer create-project --prefer-dist laravel/laravel project-name
+git clone https://github.com/judsonmb/task-manager.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd project-name
+cd task-manager
 ```
 
 ## Step 2: Configure PostgreSQL
